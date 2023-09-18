@@ -44,7 +44,7 @@ Originally created with [create-vite](https://github.com/vitejs/vite/tree/main/p
 # using the "react-ts" template
 pnpm create vite . --template react-ts
 
-# Install dependencies
+# Install development dependencies (TODO: Vet this list)
 pnpm install --save-dev eslint prettier eslint-plugin-prettier eslint-config-prettier eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/eslint-plugin @typescript-eslint/parser
 ```
 
