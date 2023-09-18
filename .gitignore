@@ -349,6 +349,9 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/node,linux,macos,windows,webstorm,visualstudiocode
 
+# Begin of original react-ts vite template .gitignore
+# It appears to be not entirely redundant, so it is left in place.
+
 # Logs
 logs
 *.log
@@ -373,3 +376,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# End of original react-ts vite template .gitignore
