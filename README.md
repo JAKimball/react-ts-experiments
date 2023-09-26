@@ -95,6 +95,8 @@ This project uses [Husky](https://typicode.github.io/husky/#/) and [Lint Staged]
 
 ### Lint Staged
 
+### knip
+
 ## License
 
 [MIT](./LICENSE)
