@@ -44,8 +44,14 @@ Originally created with [create-vite](https://github.com/vitejs/vite/tree/main/p
 # using the "react-ts" template
 pnpm create vite . --template react-ts
 
-# Install development dependencies (TODO: Vet this list)
-pnpm install --save-dev eslint prettier eslint-plugin-prettier eslint-config-prettier eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/eslint-plugin @typescript-eslint/parser
+# ** Install development dependencies **
+
+# Install Tailwind CSS (following Tailwind CSS installation instructions at https://tailwindcss.com/docs/guides/vite)
+pnpm add -D tailwindcss postcss autoprefixer
+pnpm exec tailwindcss init -p
+
+# Install ESLint and Prettier
+
 ```
 
 ### Plan for Ensuring a Stable and Up-to-Date Developer Toolchain and Configuration
