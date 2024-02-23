@@ -6,11 +6,11 @@ A playground for experimenting in React with TypeScript and Vite.
 
 - [x] [Tailwind CSS](https://tailwindcss.com/)
 - [x] [ESLint](https://eslint.org/)
-- [x] [Prettier](https://prettier.io/)
-- [x] [Vitest](https://vitest.dev/)
-- [x] [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
-- [x] [Husky](https://typicode.github.io/husky/#/)
-- [x] [Lint Staged](https://github.com/okonet/lint-staged)
+- [ ] [Prettier](https://prettier.io/)
+- [ ] [Vitest](https://vitest.dev/)
+- [ ] [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [ ] [Husky](https://typicode.github.io/husky/#/)
+- [ ] [Lint Staged](https://github.com/okonet/lint-staged)
 
 Originally created with [create-vite](https://github.com/vitejs/vite/tree/main/packages/create-vite#create-vite-). The scaffolding process is documented [here](#scaffolding-and-configuration).
 
@@ -33,9 +33,7 @@ pnpm test
 pnpm lint
 ```
 
-## Notes
-
-### Scaffolding and Configuration
+## Scaffolding and Configuration
 
 Originally created with [create-vite](https://github.com/vitejs/vite/tree/main/packages/create-vite#create-vite-):
 
@@ -43,16 +41,54 @@ Originally created with [create-vite](https://github.com/vitejs/vite/tree/main/p
 # Create a new project in the current directory 
 # using the "react-ts" template
 pnpm create vite . --template react-ts
+```
 
-# ** Install development dependencies **
+The default vite plugin from the `react-ts` template was replaced to allow Fast Refresh using SWC instead of Babel.
 
+```bash
+# Remove the default vite plugin
+pnpm remove @vitejs/plugin-react
+
+# Install the SWC plugin
+pnpm add -D @vitejs/plugin-react-swc
+```
+
+To enable Fast Refresh with SWC, the `vite.config.ts` file was updated to use the SWC plugin the build targets for production and development were set to `esnext`.
+
+```typescript
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react-swc'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  build: {
+    target: 'esnext',
+  },
+  plugins: [
+    react({
+      devTarget: 'esnext',
+    }),
+  ],
+})
+```
+
+### Install development dependencies and configuration
+
+```bash
 # Install Tailwind CSS (following Tailwind CSS installation instructions at https://tailwindcss.com/docs/guides/vite)
 pnpm add -D tailwindcss postcss autoprefixer
 pnpm exec tailwindcss init -p
-
-# Install ESLint and Prettier
-
 ```
+
+- For VS Code
+  - Install the [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) extension and enable it for the workspace.
+  - Once the extension is installed,
+    - Enable the extension for the workspace
+    - Follow the **Recommended VS Code Settings** in the extension's README
+
+#### Install ESLint and Prettier
+
+ESLint is installed with the `react-ts` template. Prettier is not installed by default.
 
 ### Plan for Ensuring a Stable and Up-to-Date Developer Toolchain and Configuration
 
@@ -107,14 +143,24 @@ This project uses [Husky](https://typicode.github.io/husky/#/) and [Lint Staged]
 
 [MIT](./LICENSE)
 
+## Additional Notes
+
+### Links
+
 <!-- Links -->
-[react](https://react.dev/)
-[typescript](https://www.typescriptlang.org/)
-[vite](https://vitejs.dev/)
-[eslint](https://eslint.org/)
-[prettier](https://prettier.io/)
-[tailwindcss](https://tailwindcss.com/)
-[vitest](https://vitest.dev/)
-[react testing library](https://testing-library.com/docs/react-testing-library/intro/)
-[husky](https://typicode.github.io/husky/#/)
-[lint staged](https://github.com/okonet/lint-staged)
+
+- Developer Docs
+  - [react](https://react.dev/)
+  - [typescript](https://www.typescriptlang.org/)
+  - [vite](https://vitejs.dev/)
+  - [eslint](https://eslint.org/)
+  - [prettier](https://prettier.io/)
+  - [tailwindcss](https://tailwindcss.com/)
+  - [vitest](https://vitest.dev/)
+  - [react testing library](https://testing-library.com/docs/react-testing-library/intro/)
+  - [husky](https://typicode.github.io/husky/#/)
+  - [lint staged](https://github.com/okonet/lint-staged)
+  - [pnpm](https://pnpm.io/)
+  - [gitignore.io](https://www.toptal.com/developers/gitignore)
+  - [GitHub Actions](https://docs.github.com/en/actions)
+  
