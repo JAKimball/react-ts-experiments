@@ -88,7 +88,13 @@ pnpm exec tailwindcss init -p
 
 #### Install ESLint and Prettier
 
-ESLint is installed with the `react-ts` template. Prettier is not installed by default.
+ESLint is installed with the create-vite `react-ts` template. Prettier is not installed by default.
+
+- [ ] Followed the [*Expanding the eslint configuration*](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts#expanding-the-eslint-configuration) section of the `react-ts` template README to configure strict rules for TypeScript and React.
+
+Ref: [ESLint installation instructions](https://eslint.org/docs/user-guide/getting-started)
+
+- [ ] Installed [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 
 ### Plan for Ensuring a Stable and Up-to-Date Developer Toolchain and Configuration
 
@@ -139,13 +145,30 @@ This project uses [Husky](https://typicode.github.io/husky/#/) and [Lint Staged]
 
 ### knip
 
+## Accessibility
+
+- [ ] TODO: Consider adding [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y) for JSX accessibility linting
+
 ## License
 
 [MIT](./LICENSE)
 
 ## Additional Notes
 
-### Links
+- [ ] TODO: Convert to the new eslint config format. This (`.eslintrc.*`) is deprecated and will not be supported in v9.x.x. `eslint` >=v8.23.0 is 100% compatible with the new format.
+
+See [Migrating from "legacy" config setups](https://typescript-eslint.io/packages/typescript-eslint/#migrating-from-legacy-config-setups)
+and [ESLint's Configuration Migration Guide](https://eslint.org/docs/latest/use/configure/migration-guide).
+
+You might want to check out the official blog posts,
+
+- [https://eslint.org/blog/2022/08/new-config-system-part-1/](https://eslint.org/blog/2022/08/new-config-system-part-1/)
+- [https://eslint.org/blog/2022/08/new-config-system-part-2/](https://eslint.org/blog/2022/08/new-config-system-part-2/)
+- [https://eslint.org/blog/2022/08/new-config-system-part-3/](https://eslint.org/blog/2022/08/new-config-system-part-3/)
+
+and [jsx-eslint/eslint-plugin-react: React-specific linting rules for ESLint (github.com)](https://github.com/jsx-eslint/eslint-plugin-react?tab=readme-ov-file)
+
+and the [official ESLint docs](https://eslint.org/docs/latest/user-guide/configuring/configuration-files-new).
 
 <!-- Links -->
 
