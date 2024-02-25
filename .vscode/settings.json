@@ -1,0 +1,9 @@
+{
+  "cSpell.words": ["knip", "rgba"],
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  }
+}
