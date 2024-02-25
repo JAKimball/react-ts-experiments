@@ -1,10 +1,10 @@
 /*
-TODO: Convert to the new eslint config format. This (.eslintrc.*) is deprecated and will not be supported in v9. eslint >=8.23.0 is 100% compatible with the new format.
+TODO: Convert to the new eslint config format. This (.eslintrc.*) is deprecated and will not be the default format in v9, and will be removed in v10. eslint >=8.23.0 is 100% compatible with the new format, but many tools are still catching up as of Feb 2024.
 */
 
 module.exports = {
   root: true,
-  env: { browser: true, es2020: true },
+  env: { browser: true, es2021: true },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/strict-type-checked',
@@ -13,7 +13,16 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs', 'eslint.config.js', 'eslint.config.*.js'],
+  ignorePatterns: [
+    '**/node_modules/',
+    '.git/',
+    'dist',
+    'coverage',
+    '.eslintrc.cjs',
+    'eslint.config.js',
+    'eslint.config.*.js',
+    'pnpm-lock.yaml',
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
@@ -21,7 +30,7 @@ module.exports = {
     project: ['./tsconfig.json', './tsconfig.node.json'],
     tsconfigRootDir: __dirname,
   },
-  plugins: ['react-refresh'],
+  plugins: ['react-refresh', '@typescript-eslint'],
   rules: {
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
   },
