@@ -5,6 +5,7 @@
     "esbenp.prettier-vscode",
     "bradlc.vscode-tailwindcss",
     "gruntfuggly.todo-tree",
-    "vitest.explorer"
+    "vitest.explorer",
+    "davidanson.vscode-markdownlint"
   ]
 }
