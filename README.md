@@ -155,7 +155,7 @@ This project uses [Husky](https://typicode.github.io/husky/#/) and [Lint Staged]
 
 ## Additional Notes
 
-- [ ] TODO: Convert to the new eslint config format. This (`.eslintrc.*`) is deprecated and will not be supported in v9.x.x. `eslint` >=v8.23.0 is 100% compatible with the new format.
+- [ ] TODO: Convert to the new eslint config format. This (`.eslintrc.*`) is deprecated and will not be the default format in v9, and will be removed in v10. eslint >=8.23.0 is 100% compatible with the new format, but many tools are still catching up as of Feb 2024. The `eslint-flat-config` branch of this repo contains WIP changes to the eslint config to use the new format.
 
 See [Migrating from "legacy" config setups](https://typescript-eslint.io/packages/typescript-eslint/#migrating-from-legacy-config-setups)
 and [ESLint's Configuration Migration Guide](https://eslint.org/docs/latest/use/configure/migration-guide).
