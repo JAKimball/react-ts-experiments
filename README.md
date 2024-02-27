@@ -38,7 +38,7 @@ pnpm lint
 Originally created with [create-vite](https://github.com/vitejs/vite/tree/main/packages/create-vite#create-vite-):
 
 ```bash
-# Create a new project in the current directory 
+# Create a new project in the current directory
 # using the "react-ts" template
 pnpm create vite . --template react-ts
 ```
@@ -86,15 +86,30 @@ pnpm exec tailwindcss init -p
     - Enable the extension for the workspace
     - Follow the **Recommended VS Code Settings** in the extension's README
 
-#### Install ESLint and Prettier
+#### Install ESLint
 
 ESLint is installed with the create-vite `react-ts` template. Prettier is not installed by default.
 
-- [ ] Followed the [*Expanding the eslint configuration*](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts#expanding-the-eslint-configuration) section of the `react-ts` template README to configure strict rules for TypeScript and React.
+- [x] Followed the [_Expanding the eslint configuration_](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts#expanding-the-eslint-configuration) section of the `react-ts` template README to configure strict rules for TypeScript and React.
 
 Ref: [ESLint installation instructions](https://eslint.org/docs/user-guide/getting-started)
 
-- [ ] Installed [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- [x] Installed [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+- [ ] TODO: Use
+      [create-typescript-app/.eslintrc.cjs at main · JoshuaKGoldberg/create-typescript-app (github.com)](https://github.com/JoshuaKGoldberg/create-typescript-app/blob/main/.eslintrc.cjs) as a reference for a more complete ESLint configuration.
+
+#### Install Prettier
+
+From the [Prettier installation instructions](https://prettier.io/docs/en/install.html):
+
+```bash
+# Install Prettier
+pnpm add --save-dev --save-exact prettier
+
+# Install eslint-config-prettier
+pnpm add --save-dev --save-exact eslint-config-prettier
+```
 
 ### Plan for Ensuring a Stable and Up-to-Date Developer Toolchain and Configuration
 
@@ -186,4 +201,3 @@ and the [official ESLint docs](https://eslint.org/docs/latest/user-guide/config
   - [pnpm](https://pnpm.io/)
   - [gitignore.io](https://www.toptal.com/developers/gitignore)
   - [GitHub Actions](https://docs.github.com/en/actions)
-  
