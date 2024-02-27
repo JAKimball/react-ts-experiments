@@ -2,6 +2,7 @@
 TODO: Convert to the new eslint config format. This (.eslintrc.*) is deprecated and will not be the default format in v9, and will be removed in v10. eslint >=8.23.0 is 100% compatible with the new format, but many tools are still catching up as of Feb 2024.
 */
 
+/** @type {import("@types/eslint").Linter.Config} */
 module.exports = {
   root: true,
   env: { browser: true, es2021: true },
