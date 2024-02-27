@@ -12,6 +12,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
+    'prettier',
   ],
   ignorePatterns: [
     '**/node_modules/',
