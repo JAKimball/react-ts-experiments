@@ -1,20 +1,22 @@
 # react-ts-experiments
 
-A playground for experimenting in React with TypeScript and Vite.
+A template for React with TypeScript and Vite building on the create-vite react-ts template.
 
-## Other Features
+## Additional Features
 
 - [x] [Tailwind CSS](https://tailwindcss.com/)
 - [x] [ESLint](https://eslint.org/)
+  - [ ] With old `.eslintrc.*` format. See [Migrating from "legacy" config setups](https://typescript-eslint.io/packages/typescript-eslint/#migrating-from-legacy-config-setups)
+  - [ ] With new `eslint.config.js` format. See [ESLint's Configuration Migration Guide](https://eslint.org/docs/latest/use/configure/migration-guide)
 - [ ] [Prettier](https://prettier.io/)
-- [ ] [Vitest](https://vitest.dev/)
-- [ ] [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 - [ ] [Husky](https://typicode.github.io/husky/#/)
 - [ ] [Lint Staged](https://github.com/okonet/lint-staged)
+- [ ] [Vitest](https://vitest.dev/)
+- [ ] [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 
 Originally created with [create-vite](https://github.com/vitejs/vite/tree/main/packages/create-vite#create-vite-). The scaffolding process is documented [here](#scaffolding-and-configuration).
 
-## Setup
+## Setup & Usage
 
 ```bash
 # Install dependencies
